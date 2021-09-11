@@ -170,6 +170,8 @@ nav {
     justify-self: center; } }
 
 @media only screen and (max-width: 450px) {
+  header {
+    height: 40vh; }
   nav ul li {
     font-size: 16px;
     margin: 0;

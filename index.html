@@ -53,14 +53,14 @@
 
 			let x = Math.round(Number(n));
 
-			if (x &lt 0) {
+			if (x &lt; 0) {
 				x = 0;
 			} else if (x > 255) {
 				x = 255;
 			}
 		
 			let hex = x.toString(16);
-			if (hex.length &lt 2) {
+			if (hex.length &lt; 2) {
 				hex = "0" + hex;
 			}
 			return hex;
@@ -86,7 +86,7 @@
 		if(arguments[0] === undefined ){
 			return result
 		}else{
-			while (i &lt matrix.length) {
+			while (i &lt; matrix.length) {
 			if (i % 2 === 0) {
 				result = result
 				.concat(matrix[i]);

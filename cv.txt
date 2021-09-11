@@ -1,0 +1,75 @@
+![Image](user.png "icon") # Tamar Bigvava
+=======  
+![Image](img/chat.png "icon") email:bigvava0205@gmail.com
+discord : Tamar-B#4337
+-----------  
+![Image](img/target.png "icon") A year ago I decided to start a new career and become front-end developer. 
+-----------  
+![Image](img/skills.png "icon") ##  Skills:
+* HTML5, CSS3 
+* JavaScript Basics
+* Git, GitHub
+* VS Code
+* Figma, Adobe XD
+
+-----------  
+![Image](img/code.png "icon") ##  Code example:
+```//RGB To Hex Conversion
+
+function rgb(r, g, b) {
+	function rgbTohex(n) {
+
+		let x = Math.round(Number(n));
+
+		if (x < 0) {
+			x = 0;
+		} else if (x > 255) {
+			x = 255;
+		}
+    
+		let hex = x.toString(16);
+		if (hex.length < 2) {
+			hex = "0" + hex;
+		}
+		return hex;
+	}
+
+	let red = rgbTohex(r).toUpperCase();
+	let green = rgbTohex(g).toUpperCase();
+	let blue = rgbTohex(b).toUpperCase();
+
+	return red + green + blue;
+}
+```
+
+-----------  
+![Image](img/projects.png "icon") ##  Projects * performed during learning period:*
+* [Photofilter]
+(https://rolling-scopes-school.github.io/takobigvava-JSFEPRESCHOOL/photfilter/)
+* [Vertical slider]
+(https://rolling-scopes-school.github.io/takobigvava-JSFEPRESCHOOL/vertical-slider/)
+* [Museum]
+(https://rolling-scopes-school.github.io/takobigvava-JSFEPRESCHOOL/museum/)
+* [Webdev]
+(https://rolling-scopes-school.github.io/takobigvava-JSFEGE/webdev/)
+* [theyalow]
+(https://rolling-scopes-school.github.io/takobigvava-JSFEGE/theyalow/)
+
+
+-----------  
+![Image](img/courses.png "icon") ##  Courses:
+[ ] RS Schools Course «JavaScript/Front-end. Stage 0
+[x] RS Schools Course «JavaScript/Front-end. Stage 0
+[x] Udemy certificate course in Adobe XD UI UX Design
+[x]Udemy certificate course in Advanced CSS and Sass: Flexbox, Grid, Animations and More!
+[x] FreeCodeCamp certificate course in javascript algorithms and data structures
+-----------  
+![Image](img/lang.png "icon") ##  Languages:
+English - professional
+Russian - conversational
+Georgian - Native
+
+
+
+![Image](Icon-pictures.png "icon")
+

@@ -1,0 +1,224 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black; }
+
+li, p {
+  line-height: 40px;
+  margin: 0 24px; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box; }
+
+.wrapper {
+  margin: 25px auto 0 auto;
+  max-width: 1200px;
+  padding: 15px;
+  overflow: hidden; }
+
+header {
+  height: 20vh; }
+
+header .wrapper,
+#code .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center; }
+
+#skills .wrapper,
+#projects .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+  gap: 20px; }
+
+#languages .wrapper,
+#courses .wrapper {
+  display: grid; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+.code {
+  font-weight: 100;
+  background-color: #AABD93; }
+
+.text_card {
+  background-color: #DDEBC7;
+  min-width: 300px; }
+
+.title {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 32px;
+  padding: 24px;
+  color: #495946; }
+
+.description {
+  margin: 24px; }
+
+.project {
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 0px 4px 1px rgba(50, 50, 50, 0.5);
+  width: 350px;
+  height: 400px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  transition: hover, 0.2s; }
+
+.project:hover {
+  transform: scale(1.04); }
+
+#languages h2,
+#courses h2 {
+  justify-self: center; }
+
+footer {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #879973;
+  padding: 40px;
+  margin-top: 40px; }
+
+footer img {
+  width: 200px;
+  height: auto; }
+
+@media only screen and (max-width: 1100px) {
+  header .wrapper {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 80px; }
+  .text_card,
+  .project {
+    width: 260px; } }
+
+@media only screen and (max-width: 850px) {
+  #code .wrapper,
+  #skills .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center; }
+  #projects .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center; }
+  .text_card,
+  .project {
+    width: 320px; } }
+
+@media only screen and (max-width: 640px) {
+  #projects .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center; }
+  #courses .fas {
+    display: none; } }
+
+h1 {
+  font-family: "Manrope", sans-serif;
+  font-size: 40px; }
+
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 20px; }
+
+#projects h2,
+#code h2 {
+  grid-column: 1 / -1;
+  justify-self: center; }
+
+figure {
+  position: absolute;
+  margin: 0 auto;
+  width: 48px;
+  height: 48px; }
+
+nav {
+  justify-self: end; }
+
+@media only screen and (max-width: 1100px) {
+  nav {
+    justify-self: center; } }
+
+@media only screen and (max-width: 450px) {
+  nav ul li {
+    font-size: 16px;
+    margin: 0;
+    color: black; }
+  h1 {
+    font-size: 24px; }
+  figure {
+    transform: translateY(-20px); }
+  nav ul {
+    flex-wrap: wrap; } }
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: large;
+  color: black; }
+
+nav ul li:not(:last-child) {
+  margin-right: 20px; }
+
+.underline {
+  position: relative; }
+
+.underline::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  height: 2px;
+  width: 0px;
+  background-color: #AABD93;
+  transition: hover, 0.2s; }
+
+li:hover .underline::after {
+  width: 100%;
+  transition: hover, 0.2s; }
+
+mark {
+  font-size: 10px;
+  padding: 0 10px;
+  background-color: #DDEBC7; }
+
+ul li span {
+  display: inline-block;
+  margin-left: 10px; }
+
+.courses ul li .fas {
+  display: inline-block;
+  color: #495946; }
+
+.address a:hover,
+footer a:hover {
+  font-weight: 600; }

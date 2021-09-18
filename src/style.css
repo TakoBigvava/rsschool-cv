@@ -19,13 +19,11 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  box-sizing: border-box; }
+  font-family: "Open Sans", sans-serif; }
 
 .wrapper {
   margin: 25px auto 0 auto;
   max-width: 1200px;
-  padding: 15px;
   overflow: hidden; }
 
 header {
@@ -42,26 +40,30 @@ header .wrapper,
 #skills .wrapper,
 #projects .wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  justify-items: center;
-  gap: 20px; }
+  justify-content: space-between;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); }
 
 #languages .wrapper,
 #courses .wrapper {
   display: grid; }
+
+#projects .wrapper a {
+  display: flex;
+  justify-content: center; }
 
 img {
   width: 100%;
   height: auto; }
 
 .code {
+  padding-left: 10px;
+  width: 100%;
   font-weight: 100;
-  background-color: #AABD93; }
+  background-color: #DDEBC7; }
 
 .text_card {
-  background-color: #DDEBC7;
-  min-width: 300px; }
+  background-color: #AABD93; }
 
 .title {
   font-family: "IBM Plex Sans Arabic", sans-serif;
@@ -73,17 +75,13 @@ img {
   margin: 24px; }
 
 .project {
-  -webkit-box-shadow: 0px 0px 4px 1px rgba(50, 50, 50, 0.5);
-  -moz-box-shadow: 0px 0px 4px 1px rgba(50, 50, 50, 0.5);
-  box-shadow: 0px 0px 4px 1px rgba(50, 50, 50, 0.5);
-  width: 350px;
-  height: 400px;
-  overflow: hidden;
-  background-color: #f1f1f1;
+  border: 1px solid #DDEBC7;
+  filter: grayscale(100%) opacity(90%);
+  z-index: -10;
   transition: hover, 0.2s; }
 
 .project:hover {
-  transform: scale(1.04); }
+  filter: grayscale(0) opacity(100%); }
 
 #languages h2,
 #courses h2 {
@@ -95,7 +93,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  background-color: #879973;
+  background-color: #DDEBC7;
   padding: 40px;
   margin-top: 40px; }
 
@@ -109,17 +107,14 @@ footer img {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr;
-    row-gap: 80px; }
-  .text_card,
-  .project {
-    width: 260px; } }
+    row-gap: 80px; } }
 
 @media only screen and (max-width: 850px) {
   #code .wrapper,
   #skills .wrapper {
     display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
     align-items: center; }
   #projects .wrapper {
     display: grid;
@@ -163,25 +158,12 @@ figure {
   height: 48px; }
 
 nav {
+  display: block;
   justify-self: end; }
 
 @media only screen and (max-width: 1100px) {
   nav {
     justify-self: center; } }
-
-@media only screen and (max-width: 450px) {
-  header {
-    height: 40vh; }
-  nav ul li {
-    font-size: 16px;
-    margin: 0;
-    color: black; }
-  h1 {
-    font-size: 24px; }
-  figure {
-    transform: translateY(-20px); }
-  nav ul {
-    flex-wrap: wrap; } }
 
 nav ul {
   display: flex;
@@ -212,7 +194,7 @@ li:hover .underline::after {
 mark {
   font-size: 10px;
   padding: 0 10px;
-  background-color: #DDEBC7; }
+  background-color: #AABD93; }
 
 ul li span {
   display: inline-block;
@@ -229,3 +211,61 @@ footer a:hover {
 .date {
   font-size: 12px;
   margin: 24px; }
+
+#hamMenu {
+  display: none; }
+
+@media only screen and (max-width: 600px) {
+  #hamMenu {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100; }
+  .desktopMenu {
+    display: none; }
+  figure {
+    position: absolute;
+    margin: 150px auto 0 auto;
+    width: 48px;
+    height: 48px; }
+  h1 {
+    font-size: 30px; }
+  .mobileNav {
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    background-color: #879973;
+    transform: translateX(201px);
+    transition: 0.4s; }
+  .mobileNav ul {
+    margin: 150px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 0; } }
+
+.show {
+  transform: translateX(0); }
+
+.upperLine,
+.middleLine,
+.bottomLine {
+  width: 35px;
+  height: 4px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s; }
+
+.crossed .upperLine {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px); }
+
+.crossed .middleLine {
+  opacity: 0; }
+
+.crossed .bottomLine {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -7px); }

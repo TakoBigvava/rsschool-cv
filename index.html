@@ -16,14 +16,40 @@
 </head>
 
 <body>
+	<div class="mobileNavigation">
+		<nav class ="mobileNav">
+				<ul>
+					<li><a href="#topPage">Top</a>
+						<div class="underline"></div>
+					</li>
+					<li><a href="#skills">skills</a>
+						<div class="underline"></div>
+					</li>
+					<li><a href="#projects">Projects</a>
+						<div class="underline"></div>
+					</li>
+					<li><a href="#courses">courses</a>
+						<div class="underline"></div>
+					</li>
+					<li><a href="#languages">languages</a>
+						<div class="underline"></div>
+					</li>
+				</ul>
+			</nav>
+			<div id="hamMenu" onclick="toggleMenu()">
+				<div class="upperLine"></div>
+				<div class="middleLine"></div>
+				<div class="bottomLine"></div>
+			  </div>
+	</div>
 	<header>
-		<div class="wrapper">
+		<div class="wrapper" id="topPage">
 			<h1> Tamar Bigvava <mark>cv</mark>
 			</h1>
 			<figure>
 				<img src="image/turtle.svg" alt="avatar" />
 			</figure>
-			<nav>
+			<nav class ="desktopMenu">
 				<ul>
 					<li><a href="#skills">skills</a>
 						<div class="underline"></div>
@@ -48,60 +74,60 @@
 				<div class="code">
 					<pre>
 						<code>
-	function rgb(r, g, b) {
-		function rgbTohex(n) {
+function rgb(r, g, b) {
+	function rgbTohex(n) {
 
-			let x = Math.round(Number(n));
+		let x = Math.round(Number(n));
 
-			if (x &lt; 0) {
-				x = 0;
-			} else if (x > 255) {
-				x = 255;
-			}
-		
-			let hex = x.toString(16);
-			if (hex.length &lt; 2) {
-				hex = "0" + hex;
-			}
-			return hex;
+		if (x &lt; 0) {
+			x = 0;
+		} else if (x > 255) {
+			x = 255;
 		}
-
-		let red = rgbTohex(r).toUpperCase();
-		let green = rgbTohex(g).toUpperCase();
-		let blue = rgbTohex(b).toUpperCase();
-
-		return red + green + blue;
+	
+		let hex = x.toString(16);
+		if (hex.length &lt; 2) {
+			hex = "0" + hex;
+		}
+		return hex;
 	}
-						</code>
-					</pre>
-				</div>
-				<div class="code">
-					<pre>
-						<code>
-	function towelSort(matrix) {
 
-		let result = [];
-		let i = 0;
+	let red = rgbTohex(r).toUpperCase();
+	let green = rgbTohex(g).toUpperCase();
+	let blue = rgbTohex(b).toUpperCase();
 
-		if(arguments[0] === undefined ){
-			return result
-		}else{
-			while (i &lt; matrix.length) {
-			if (i % 2 === 0) {
-				result = result
-				.concat(matrix[i]);
-				
-			} else {
-				result = result
-				.concat(matrix[i]
-				.reverse());
-			}
-			i++;
+	return red + green + blue;
+}
+					</code>
+				</pre>
+			</div>
+			<div class="code">
+				<pre>
+					<code>
+function towelSort(matrix) {
+
+	let result = [];
+	let i = 0;
+
+	if(arguments[0] === undefined ){
+		return result
+	}else{
+		while (i &lt; matrix.length) {
+		if (i % 2 === 0) {
+			result = result
+			.concat(matrix[i]);
+			
+		} else {
+			result = result
+			.concat(matrix[i]
+			.reverse());
 		}
-		}
+		i++;
+	}
+	}
 
-		return result;
-	};
+	return result;
+};
 						</code>
 					</pre>
 				</div>
@@ -188,12 +214,12 @@
 			<div class="wrapper">
 				<h2> courses </h2>
 			<ul>
-				<li><i class="fas fa-spinner"></i><span>RS Schools Course «JavaScript/Front-end. Stage 1</span></li>
-				<li><i class="fas fa-check"></i><span>RS Schools Course «JavaScript/Front-end. Stage 0</span></li>
-				<li><i class="fas fa-check"></i><span>Udemy certificate course in Adobe XD UI UX Design</span></li>
-				<li><i class="fas fa-check"></i><span>Udemy certificate course in Advanced CSS and Sass</span></li>
+				<li><i class="fas fa-spinner"></i><span>RS Schools Course «JavaScript/Front-end. Stage 1;</span></li>
+				<li><i class="fas fa-check"></i><span>RS Schools Course «JavaScript/Front-end. Stage 0;</span></li>
+				<li><i class="fas fa-check"></i><span>Udemy certificate course in Adobe XD UI UX Design;</span></li>
+				<li><i class="fas fa-check"></i><span>Udemy certificate course in Advanced CSS and Sass;</span></li>
 				<li><i class="fas fa-check"></i><span>FreeCodeCamp certificate course in javascript algorithms and data
-					structures</span></li>
+					structures;</span></li>
 			</ul>
 			</div>
 
@@ -224,6 +250,7 @@
 			<div class="date">created in 2021</div>
 			
 	</footer>
+	<script src="src/script.js"></script>
 </body>
 
 </html>

@@ -57,14 +57,8 @@ img {
   width: 100%;
   height: auto; }
 
-.code {
-  padding-left: 10px;
-  width: 100%;
-  font-weight: 100;
-  background-color: #DDEBC7; }
-
 .text_card {
-  background-color: #AABD93; }
+  background-color: #DDEBC7; }
 
 .title {
   font-family: "IBM Plex Sans Arabic", sans-serif;
@@ -109,10 +103,14 @@ footer img {
     grid-template-columns: 1fr;
     row-gap: 80px; }
   #code .wrapper {
-    margin-top: 40px; } }
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: #f0f0f0; } }
 
 @media only screen and (max-width: 850px) {
-  #code .wrapper,
   #skills .wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);

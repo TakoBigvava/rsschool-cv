@@ -1,6 +1,6 @@
 const hamMenu = document.getElementById("hamMenu")
-const mobileNav = document.querySelector('.mobileNav')
-const buttons = document.querySelectorAll('.mobileNav li')
+const mobileNav = document.querySelector('#menu')
+const buttons = document.querySelectorAll('#menu li')
 
 
 function toggleMenu(){
